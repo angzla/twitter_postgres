@@ -209,7 +209,7 @@ def insert_tweet(connection,tweet):
                 values (:id_users)
                 on conflict do nothing
                 ''')
-                res = connection.execute(sql, {
+            res = connection.execute(sql, {
                 'id_users':tweet['in_reply_to_user_id']
                 })
 
